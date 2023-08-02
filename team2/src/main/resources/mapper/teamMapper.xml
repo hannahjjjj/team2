@@ -10,5 +10,12 @@
 				(teamno, teamname, teamage)
 		]]>
 	</insert>
+	
+	<delete id="deleteTeam" parameterType="Integer">
+	<![CDATA[
+		DELETE FROM TEAM2
+		WHERE teamno=#{teamno}
+	]]>
+	</delete>
 
 </mapper>

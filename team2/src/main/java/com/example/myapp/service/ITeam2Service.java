@@ -9,4 +9,10 @@ import com.example.myapp.model.Team2VO;
 @Mapper
 public interface ITeam2Service {
 	void createTeam(Team2VO team2);
+
+	void deleteTeamContent(int teamno);
+
+
+
+
 }
