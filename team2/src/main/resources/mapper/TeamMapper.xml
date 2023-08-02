@@ -7,8 +7,16 @@
 			INSERT INTO TEAM2
 				(teamno, teamname, teamage)
 			VALUES
-				(teamno, teamname, teamage)
+				(#{teamno}, #{teamname}, #{teamage})
 		]]>
 	</insert>
+	
+	<select id="selectAllTeam" resultType="com.example.myapp.model.Team2VO">
+		<![CDATA[
+			SELECT 
+				teamno, teamname, teamage
+			FROM team2
+		]]>
+	</select>
 
 </mapper>
