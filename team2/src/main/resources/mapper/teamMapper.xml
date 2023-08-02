@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.myapp.dao.ITeam2Repository">
+
+	<insert id="createTeam" parameterType="com.example.myapp.model.Team2VO">
+		<![CDATA[
+			INSERT INTO TEAM2
+				(teamno, teamname, teamage)
+			VALUES
+				(teamno, teamname, teamage)
+		]]>
+	</insert>
+	
+	<delete id="deleteTeam" parameterType="Integer">
+	<![CDATA[
+		DELETE FROM TEAM2
+		WHERE teamno=#{teamno}
+	]]>
+	</delete>
+
+</mapper>
