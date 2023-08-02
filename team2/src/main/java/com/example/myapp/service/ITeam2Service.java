@@ -1,12 +1,13 @@
 package com.example.myapp.service;
 
-import org.apache.ibatis.annotations.Mapper;
-import org.springframework.stereotype.Service;
+import java.util.List;
+
+
 
 import com.example.myapp.model.Team2VO;
 
-@Service
-@Mapper
+
 public interface ITeam2Service {
 	void createTeam(Team2VO team2);
+	List<Team2VO> selectAllTeam();
 }
