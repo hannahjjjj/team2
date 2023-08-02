@@ -7,7 +7,7 @@
 			INSERT INTO TEAM2
 				(teamno, teamname, teamage)
 			VALUES
-				(teamno, teamname, teamage)
+				(#{teamno}, #{teamname}, #{teamage})
 		]]>
 	</insert>
 	

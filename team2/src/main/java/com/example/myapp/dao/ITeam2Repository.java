@@ -12,7 +12,7 @@ import com.example.myapp.model.Team2VO;
 public interface ITeam2Repository {
 	void createTeam(Team2VO team2);
 	List<Team2VO> selectAllTeam();
-	void deleteTeam(int teamno);
+	void deleteTeam(Team2VO team2);
 	void updateTeam(Team2VO team2);
 
 }

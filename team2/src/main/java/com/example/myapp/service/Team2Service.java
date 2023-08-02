@@ -29,14 +29,14 @@ public class Team2Service implements ITeam2Service {
 	}
 
 	@Override
-	public void deleteTeamContent(int teamno) {
-		teamRepository.deleteTeam(teamno);
+	public void updateTeam(Team2VO team2) {
+		teamRepository.updateTeam(team2);
 		
 	}
 
 	@Override
-	public void updateTeam(Team2VO team2) {
-		teamRepository.updateTeam(team2);
+	public void deleteTeamContent(Team2VO team2) {
+		teamRepository.deleteTeam(team2);
 		
 	}
 
