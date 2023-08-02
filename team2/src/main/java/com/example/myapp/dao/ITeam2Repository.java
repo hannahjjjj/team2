@@ -13,5 +13,6 @@ public interface ITeam2Repository {
 	void createTeam(Team2VO team2);
 	List<Team2VO> selectAllTeam();
 	void deleteTeam(int teamno);
+	void updateTeam(Team2VO team2);
 
 }

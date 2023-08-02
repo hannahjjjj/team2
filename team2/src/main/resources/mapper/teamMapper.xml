@@ -25,5 +25,15 @@
 		WHERE teamno=#{teamno}
 	]]>
 	</delete>
-
+	
+	<update id="updateTeam" parameterType="com.example.myapp.model.Team2VO">
+	<![CDATA[
+		UPDATE
+			TEAM2
+		SET
+			teamname = #{teamname}, teamage = #{teamage}
+		WHERE
+			teamno = #{teamno}
+	]]>
+	</update>
 </mapper>

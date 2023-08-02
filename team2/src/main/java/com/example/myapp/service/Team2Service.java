@@ -34,6 +34,13 @@ public class Team2Service implements ITeam2Service {
 		
 	}
 
+	@Override
+	public void updateTeam(Team2VO team2) {
+		teamRepository.updateTeam(team2);
+		
+	}
+
+
 
 
 
