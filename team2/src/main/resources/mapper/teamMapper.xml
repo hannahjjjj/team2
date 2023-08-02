@@ -11,11 +11,29 @@
 		]]>
 	</insert>
 	
+	<select id="selectAllTeam" resultType="com.example.myapp.model.Team2VO">
+		<![CDATA[
+			SELECT
+				teamno, teamname, teamage
+			FROM TEAM2	
+		]]>
+		</select>
+	
 	<delete id="deleteTeam" parameterType="Integer">
 	<![CDATA[
 		DELETE FROM TEAM2
 		WHERE teamno=#{teamno}
 	]]>
 	</delete>
-
+	
+	<update id="updateTeam" parameterType="com.example.myapp.model.Team2VO">
+	<![CDATA[
+		UPDATE
+			TEAM2
+		SET
+			teamname = #{teamname}, teamage = #{teamage}
+		WHERE
+			teamno = #{teamno}
+	]]>
+	</update>
 </mapper>

@@ -44,6 +44,20 @@ public class MainController {
 		return"index";
 	}
 	
+	@RequestMapping(value="/update", method=RequestMethod.GET)
+	public String updateteam(Model model) {
+		List<Team2VO> teamList = teamService.selectAllTeam();
+		model.addAttribute("teamList", teamList);
+		return"update";
+	}
+	
+	@RequestMapping(value="/update", method=RequestMethod.POST)
+	public String updateteam(Model model, Team2VO team2) {
+		teamService.updateTeam(team2);
+		model.addAttribute("team2", team2);
+		return "update";
+	}
+	
 	
 	
 	@RequestMapping(value = "/delete", method=RequestMethod.GET)
@@ -55,6 +69,7 @@ public class MainController {
 	public String deleteTeam(int teamno) {
 		teamService.deleteTeamContent(teamno);
 		return "delete";
+
 	}
 	
 }
