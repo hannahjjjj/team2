@@ -10,9 +10,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.example.myapp.model.Team2VO;
 import com.example.myapp.service.ITeam2Service;
-import com.example.myapp.service.Team2Service;
-
-import lombok.RequiredArgsConstructor;
 
 
 @Controller
@@ -69,11 +66,10 @@ public class MainController {
 	}
 	
 	@RequestMapping(value = "/delete", method=RequestMethod.POST)
-	public int deleteTeam(int teamno) {
-		
-//		
-//		teamService.deleteTeamContent(teamno);
-		return teamno;
+	public String deleteTeam(int teamno) {
+		teamService.deleteTeamContent(teamno);
+		return "delete";
+
 	}
 	
 }
