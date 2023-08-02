@@ -14,9 +14,9 @@ import com.example.myapp.service.Team2Service;
 
 import lombok.RequiredArgsConstructor;
 
+
 @Controller
 public class MainController {
-	
 	@Autowired
 	ITeam2Service teamService;
 	
@@ -46,5 +46,20 @@ public class MainController {
 		}		
 		return"index";
 	}
-
+	
+	
+	
+	@RequestMapping(value = "/delete", method=RequestMethod.GET)
+	public void deleteTeam() {
+		
+	}
+	
+	@RequestMapping(value = "/delete", method=RequestMethod.POST)
+	public int deleteTeam(int teamno) {
+		
+		
+		teamService.deleteTeamContent(teamno);
+		return teamno;
+	}
+	
 }
