@@ -11,6 +11,14 @@
 		]]>
 	</insert>
 	
+	<select id="selectAllTeam" resultType="com.example.myapp.model.Team2VO">
+		<![CDATA[
+			SELECT
+				teamno, teamname, teamage
+			FROM TEAM2	
+		]]>
+		</select>
+	
 	<delete id="deleteTeam" parameterType="Integer">
 	<![CDATA[
 		DELETE FROM TEAM2
